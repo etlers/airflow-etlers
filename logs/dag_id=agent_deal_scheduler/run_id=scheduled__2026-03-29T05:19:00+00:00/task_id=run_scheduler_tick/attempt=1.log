@@ -1,0 +1,175 @@
+{"timestamp":"2026-03-29T05:19:45.072071","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-03-29T05:19:45.072395","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/agent_deal.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-03-29T05:19:45.273135","level":"info","event":"Starting docker container from image agent-deal-scheduler:latest","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.047916","level":"info","event":"Traceback (most recent call last):","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.048094","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 787, in urlopen","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050141","level":"info","event":"    response = self._make_request(","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050196","level":"info","event":"               ^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050219","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 493, in _make_request","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050258","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050405","level":"info","event":"conn.request(","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050432","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/connection.py\", line 500, in request","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050898","level":"info","event":"    self.endheaders()","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050928","level":"info","event":"  File \"/usr/local/lib/python3.12/http/client.py\", line 1353, in endheaders","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.050989","level":"info","event":"    self._send_output(message_body, encode_chunked=encode_chunked)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051013","level":"info","event":"  File \"/usr/local/lib/python3.12/http/client.py\", line 1113, in _send_output","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051185","level":"info","event":"    self.send(msg)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051248","level":"info","event":"  File \"/usr/local/lib/python3.12/http/client.py\", line 1057, in send","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051466","level":"info","event":"    self.connect()","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051500","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/transport/unixconn.py\", line 26, in connect","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051836","level":"info","event":"    sock.connect(self.unix_socket)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051863","level":"info","event":"FileNotFoundError","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051895","level":"info","event":": [Errno 2] No such file or directory","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051912","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.051926","level":"info","event":"During handling of the above exception, another exception occurred:","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052048","level":"info","event":"Traceback (most recent call last):","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052093","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/requests/adapters.py\", line 644, in send","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052502","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052610","level":"info","event":"resp = conn.urlopen(","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052686","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052771","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052838","level":"info","event":"     ^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052860","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052880","level":"info","event":"^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.052942","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053031","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 841, in urlopen","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053065","level":"info","event":"    retries = retries.increment(","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053082","level":"info","event":"              ^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053168","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053206","level":"info","event":"^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053230","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053356","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053436","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053465","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/util/retry.py\", line 490, in increment","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053705","level":"info","event":"    raise reraise(type(error), error, _stacktrace)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053731","level":"info","event":"          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053772","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/util/util.py\", line 38, in reraise","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.053977","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054038","level":"info","event":"raise value.with_traceback(tb)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054062","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 787, in urlopen","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054109","level":"info","event":"    response = self._make_request(","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054129","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054220","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054252","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054289","level":"info","event":"        ^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054324","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/connectionpool.py\", line 493, in _make_request","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054346","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054365","level":"info","event":"conn.request(","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.054808","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.055045","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/urllib3/connection.py\", line 500, in request","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.055180","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.055269","level":"info","event":"self.endheaders()","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.055288","level":"info","event":"  File \"/usr/local/lib/python3.12/http/client.py\", line 1353, in endheaders","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.055414","level":"info","event":"    self._send_output(message_body, encode_chunked=encode_chunked)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.055835","level":"info","event":"  File \"/usr/local/lib/python3.12/http/client.py\", line 1113, in _send_output","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.055895","level":"info","event":"    self.send(msg)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.055916","level":"info","event":"  File \"/usr/local/lib/python3.12/http/client.py\", line 1057, in send","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056076","level":"info","event":"    self.connect()","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056168","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/transport/unixconn.py\", line 26, in connect","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056297","level":"info","event":"    sock.connect(self.unix_socket)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056315","level":"info","event":"urllib3.exceptions.ProtocolError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056448","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056480","level":"info","event":"During handling of the above exception, another exception occurred:","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056508","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056537","level":"info","event":"Traceback (most recent call last):","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056554","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/api/client.py\", line 223, in _retrieve_server_version","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056721","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056849","level":"info","event":"return self.version(api_version=False)[\"ApiVersion\"]","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.056985","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057040","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057121","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057170","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057205","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057259","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057313","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057337","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057384","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057422","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057451","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057490","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057553","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057575","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057603","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057624","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057671","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057709","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057756","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057822","level":"info","event":"^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057848","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057899","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057921","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057939","level":"info","event":"^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057970","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.057993","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058006","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/api/daemon.py\", line 181, in version","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058065","level":"info","event":"    return self._result(self._get(url), json=True)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058096","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058123","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058156","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058180","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058237","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058259","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058342","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058372","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058393","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058412","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058444","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058477","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058573","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058616","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058646","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058667","level":"info","event":"   ^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058687","level":"info","event":"^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058706","level":"info","event":"^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058726","level":"info","event":"^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058746","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/utils/decorators.py\", line 44, in inner","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058766","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058785","level":"info","event":"return f(self, *args, **kwargs)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058808","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058830","level":"info","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058869","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/api/client.py\", line 246, in _get","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058938","level":"info","event":"    return self.get(url, **self._set_request_timeout(kwargs))","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058959","level":"info","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.058974","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/requests/sessions.py\", line 602, in get","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059078","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059114","level":"info","event":"return self.request(\"GET\", url, **kwargs)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059203","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059242","level":"info","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059281","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/requests/sessions.py\", line 589, in request","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059303","level":"info","event":"    resp = self.send(prep, **send_kwargs)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059333","level":"info","event":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059378","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/requests/sessions.py\", line 703, in send","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059394","level":"info","event":"    r = adapter.send(request, **kwargs)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059416","level":"info","event":"        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059476","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/requests/adapters.py\", line 659, in send","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059526","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059568","level":"info","event":"raise ConnectionError(err, request=request)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059664","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059692","level":"info","event":"requests.exceptions","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059737","level":"info","event":".ConnectionError: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059756","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059771","level":"info","event":"The above exception was the direct cause of the following exception:","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059821","level":"info","event":"Traceback (most recent call last):","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059844","level":"info","event":"  File \"<frozen runpy>\", line 198, in _run_module_as_main","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059895","level":"info","event":"  File \"<frozen runpy>\", line 88, in _run_code","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.059910","level":"info","event":"  File \"/app/src/schedule/scheduler.py\", line 732, in <module>","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060123","level":"info","event":"    SiseScheduler().run()","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060178","level":"info","event":"    ^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060245","level":"info","event":"  File \"/app/src/schedule/scheduler.py\", line 201, in __init__","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060261","level":"info","event":"    self.client = docker.from_env()","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060325","level":"info","event":"                  ^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060349","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/client.py\", line 94, in from_env","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060403","level":"info","event":"    return cls(","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060431","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.060463","level":"info","event":"","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062021","level":"info","event":"     ^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062094","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/client.py\", line 45, in __init__","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062112","level":"info","event":"    self.api = APIClient(*args, **kwargs)","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062128","level":"info","event":"               ^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062142","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/api/client.py\", line 207, in __init__","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062156","level":"info","event":"    self._version = self._retrieve_server_version()","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062169","level":"info","event":"                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062181","level":"info","event":"  File \"/usr/local/lib/python3.12/site-packages/docker/api/client.py\", line 230, in _retrieve_server_version","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062200","level":"info","event":"    raise DockerException(","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.062221","level":"info","event":"docker.errors.DockerException: Error while fetching server API version: ('Connection aborted.', FileNotFoundError(2, 'No such file or directory'))","logger":"airflow.task.operators.airflow.providers.docker.operators.docker.DockerOperator"}
+{"timestamp":"2026-03-29T05:19:46.892499","level":"info","event":"Pushing xcom","ti":"RuntimeTaskInstance(id=UUID('019d3808-a613-7227-9ea4-ab69dba8d4d4'), task_id='run_scheduler_tick', dag_id='agent_deal_scheduler', run_id='scheduled__2026-03-29T05:19:00+00:00', try_number=1, map_index=-1, hostname='6c03dc990432', context_carrier=None, task=<Task(DockerOperator): run_scheduler_tick>, bundle_instance=LocalDagBundle(name=dags-folder), max_tries=1, start_date=datetime.datetime(2026, 3, 29, 5, 19, 44, 406826, tzinfo=TzInfo(UTC)), end_date=None, state=<TaskInstanceState.RUNNING: 'running'>, is_mapped=False, rendered_map_index=None)","logger":"task"}

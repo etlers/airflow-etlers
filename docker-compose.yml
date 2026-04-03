@@ -1,0 +1,62 @@
+services:
+  airflow-init:
+    build: .
+    env_file: .env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://ekis_user:ekis_password@pg-db:5432/ekis_web
+      AIRFLOW__DATABASE__SQL_ALCHEMY_SCHEMA: airflow_meta
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+    command: >
+      bash -c "airflow db migrate"
+    restart: "no"
+    networks:
+      - ekis_web_default
+
+  airflow-webserver:
+    build: .
+    depends_on:
+      - airflow-init
+    env_file: .env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://ekis_user:ekis_password@pg-db:5432/ekis_web
+      AIRFLOW__DATABASE__SQL_ALCHEMY_SCHEMA: airflow_meta
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+    command: api-server
+    ports:
+      - "9999:8080"
+    restart: unless-stopped
+    networks:
+      - ekis_web_default
+
+  airflow-scheduler:
+    build: .
+    depends_on:
+      - airflow-init
+    env_file: .env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://ekis_user:ekis_password@pg-db:5432/ekis_web
+      AIRFLOW__DATABASE__SQL_ALCHEMY_SCHEMA: airflow_meta
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+    command: scheduler
+    restart: unless-stopped
+    networks:
+      - ekis_web_default
+
+networks:
+  ekis_web_default:
+    external: true

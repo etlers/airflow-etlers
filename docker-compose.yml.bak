@@ -1,0 +1,74 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: airflow
+      POSTGRES_PASSWORD: airflow
+      POSTGRES_DB: airflow
+    volumes:
+      - postgres-db-volume:/var/lib/postgresql/data
+    restart: unless-stopped
+
+  airflow-init:
+    image: apache/airflow:3.0.2
+    depends_on:
+      - postgres
+    env_file: .env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-docker apache-airflow-providers-fab docker httpx==0.28.1"
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+    command: >
+      bash -c "airflow db migrate"
+    restart: "no"
+
+  airflow-webserver:
+    image: apache/airflow:3.0.2
+    depends_on:
+      - postgres
+      - airflow-init
+    env_file: .env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-docker apache-airflow-providers-fab docker httpx==0.28.1"
+    user: "${AIRFLOW_UID}:${AIRFLOW_GID}"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+      - /Users/etlers/workspace/etlers_etf_forecast:/opt/forecast
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: api-server
+    ports:
+      - "2002:8080"
+    restart: unless-stopped
+
+  airflow-scheduler:
+    image: apache/airflow:3.0.2
+    depends_on:
+      - postgres
+      - airflow-init
+    env_file: .env
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres/airflow
+      _PIP_ADDITIONAL_REQUIREMENTS: "apache-airflow-providers-docker apache-airflow-providers-fab docker httpx==0.28.1"
+    user: "50000:991"
+    volumes:
+      - ./dags:/opt/airflow/dags
+      - ./logs:/opt/airflow/logs
+      - ./plugins:/opt/airflow/plugins
+      - ./config:/opt/airflow/config
+      - /Users/etlers/workspace/etlers_etf_forecast:/opt/forecast
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: scheduler
+    restart: unless-stopped
+
+volumes:
+  postgres-db-volume:
+
